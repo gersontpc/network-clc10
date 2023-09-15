@@ -14,7 +14,7 @@ env:
 
 jobs:
   apply-dev:
-    name: 'terraform apply dev'
+    name: 'terraform apply'
     runs-on: ubuntu-latest
     env:
       TF_WORKING_DIR: 'prod'
@@ -31,7 +31,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          terraform_version: 0.15.5
+          terraform_version: 1.0.0
 
       - name: Terraform fmt
         id: fmt
