@@ -46,5 +46,10 @@ jobs:
         id: validate
         run: terraform validate -no-color
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      # - name: Terraform Apply
+      #   run: terraform apply -auto-approve
+
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
+
+
